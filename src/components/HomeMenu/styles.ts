@@ -1,14 +1,5 @@
 import styled, { css } from 'styled-components';
 
-export const Text = styled.p`
-  ${({ theme }) => css`
-    font-size: ${theme.font.size.xs};
-    color: #5d5d5b;
-    font-family: ${theme.font.family.primary};
-    font-weight: 500;
-  `}
-`;
-
 export const Container = styled.main`
   display: grid;
   place-items: center;
