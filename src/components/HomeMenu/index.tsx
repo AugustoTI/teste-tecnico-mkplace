@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import * as S from './styles';
-import IconAdd from '../../assets/plus.svg';
 import IconList from '../../assets/paper.svg';
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import { Title } from '../Title';
 import { BoxIcon } from '../BoxIcon';
+import { LinkCreateList } from '../LinkCreateList';
 
 export const HomeMenu = () => {
   const theme = useContext(ThemeContext);
@@ -18,7 +18,7 @@ export const HomeMenu = () => {
         <S.WrapperLinks>
           <Link href={`/list`}>
             <a>
-              <S.ContainerLink borderColor={theme.colors.base.c4}>
+              <S.ContainerLink>
                 <BoxIcon background={theme.colors.base.c5a} colorIcon={'#4F4F4F'}>
                   <IconList />
                 </BoxIcon>
@@ -36,26 +36,7 @@ export const HomeMenu = () => {
               </S.ContainerLink>
             </a>
           </Link>
-          <Link href="/create-list">
-            <a>
-              <S.ContainerLink borderColor={theme.colors.contrast.c4}>
-                <BoxIcon
-                  background={theme.colors.contrast.c4a}
-                  colorIcon={theme.colors.contrast.c2}
-                >
-                  <IconAdd />
-                </BoxIcon>
-                <Title
-                  as="h2"
-                  weight={700}
-                  textColor={theme.colors.contrast.c2}
-                  size="small"
-                >
-                  Criar uma lista de compras
-                </Title>
-              </S.ContainerLink>
-            </a>
-          </Link>
+          <LinkCreateList />
         </S.WrapperLinks>
       </S.Content>
     </S.Container>

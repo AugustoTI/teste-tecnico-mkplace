@@ -1,9 +1,5 @@
 import styled, { css } from 'styled-components';
 
-interface Box {
-  borderColor?: string;
-}
-
 export const Text = styled.p`
   ${({ theme }) => css`
     font-size: ${theme.font.size.xs};
@@ -31,13 +27,13 @@ export const WrapperLinks = styled.div`
   gap: 1.6rem;
 `;
 
-export const ContainerLink = styled.div<Box>`
-  ${({ theme, borderColor = '#000' }) => css`
+export const ContainerLink = styled.div`
+  ${({ theme }) => css`
     display: flex;
     gap: 1.2rem;
     align-items: center;
     border-radius: 1rem;
-    border: 1px solid ${borderColor};
+    border: 1px solid ${theme.colors.base.c4};
     padding: 1.2rem;
     position: relative;
   `}
