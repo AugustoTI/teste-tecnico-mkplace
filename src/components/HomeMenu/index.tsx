@@ -5,6 +5,7 @@ import IconAdd from '../../assets/plus.svg';
 import IconList from '../../assets/paper.svg';
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
+import { Title } from '../Title';
 
 export const HomeMenu = () => {
   const theme = useContext(ThemeContext);
@@ -24,15 +25,14 @@ export const HomeMenu = () => {
                   <IconList />
                 </S.BoxIcon>
                 <div>
-                  <S.Title
-                    lineHeight={1.5}
+                  <Title
+                    as="h2"
                     textColor={theme.colors.base.c7}
-                    family={theme.font.family.primary}
                     weight={700}
-                    size={theme.font.size.s}
+                    size={'small'}
                   >
                     Lista 56431
-                  </S.Title>
+                  </Title>
                   <S.Text>1 categorias / 1 itens</S.Text>
                 </div>
               </S.ContainerLink>
@@ -47,15 +47,14 @@ export const HomeMenu = () => {
                 >
                   <IconAdd />
                 </S.BoxIcon>
-                <S.Title
-                  lineHeight={1.5}
-                  textColor={theme.colors.contrast.c2}
-                  family={theme.font.family.primary}
+                <Title
+                  as="h2"
                   weight={700}
-                  size={theme.font.size.s}
+                  textColor={theme.colors.contrast.c2}
+                  size="small"
                 >
                   Criar uma lista de compras
-                </S.Title>
+                </Title>
               </S.ContainerLink>
             </a>
           </Link>

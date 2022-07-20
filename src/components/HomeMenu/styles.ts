@@ -9,30 +9,6 @@ interface Box {
   borderColor?: string;
 }
 
-interface TitleProps {
-  family?: string;
-  size?: string;
-  textColor?: string;
-  weight?: number;
-  lineHeight?: number;
-}
-
-export const Title = styled.h2<TitleProps>`
-  ${({
-    family = 'sans-serif',
-    size = '3.2rem',
-    textColor = '#000',
-    weight = 400,
-    lineHeight = 1.5,
-  }) => css`
-    font-family: ${family};
-    font-size: ${size};
-    font-weight: ${weight};
-    line-height: ${lineHeight};
-    color: ${textColor};
-  `}
-`;
-
 export const Text = styled.p`
   ${({ theme }) => css`
     font-size: ${theme.font.size.xs};
