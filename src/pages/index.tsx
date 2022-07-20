@@ -1,9 +1,10 @@
 import type { NextPage } from 'next';
+import { HomeMenu } from '../components/HomeMenu';
 
 const Home: NextPage = () => {
   return (
     <>
-      <h1>Oi</h1>
+      <HomeMenu />
     </>
   );
 };
