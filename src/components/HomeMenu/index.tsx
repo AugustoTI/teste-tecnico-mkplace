@@ -6,6 +6,7 @@ import IconList from '../../assets/paper.svg';
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import { Title } from '../Title';
+import { BoxIcon } from '../BoxIcon';
 
 export const HomeMenu = () => {
   const theme = useContext(ThemeContext);
@@ -18,12 +19,9 @@ export const HomeMenu = () => {
           <Link href={`/list`}>
             <a>
               <S.ContainerLink borderColor={theme.colors.base.c4}>
-                <S.BoxIcon
-                  backgroundBox={theme.colors.base.c5a}
-                  colorIcon={'#4F4F4F'}
-                >
+                <BoxIcon background={theme.colors.base.c5a} colorIcon={'#4F4F4F'}>
                   <IconList />
-                </S.BoxIcon>
+                </BoxIcon>
                 <div>
                   <Title
                     as="h2"
@@ -41,12 +39,12 @@ export const HomeMenu = () => {
           <Link href="/create-list">
             <a>
               <S.ContainerLink borderColor={theme.colors.contrast.c4}>
-                <S.BoxIcon
-                  backgroundBox={theme.colors.contrast.c4a}
+                <BoxIcon
+                  background={theme.colors.contrast.c4a}
                   colorIcon={theme.colors.contrast.c2}
                 >
                   <IconAdd />
-                </S.BoxIcon>
+                </BoxIcon>
                 <Title
                   as="h2"
                   weight={700}

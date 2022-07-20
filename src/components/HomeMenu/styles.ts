@@ -1,10 +1,5 @@
 import styled, { css } from 'styled-components';
 
-interface BoxIconProps {
-  colorIcon?: string;
-  backgroundBox?: string;
-}
-
 interface Box {
   borderColor?: string;
 }
@@ -34,19 +29,6 @@ export const Content = styled.div`
 export const WrapperLinks = styled.div`
   display: grid;
   gap: 1.6rem;
-`;
-
-export const BoxIcon = styled.i<BoxIconProps>`
-  ${({ colorIcon = '#fff', backgroundBox = '#000' }) => css`
-    display: inline-flex;
-    padding: 1.2rem;
-    border-radius: 1rem;
-    background-color: ${backgroundBox};
-
-    svg * {
-      fill: ${colorIcon};
-    }
-  `}
 `;
 
 export const ContainerLink = styled.div<Box>`
