@@ -1,10 +1,9 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.main`
+export const Container = styled.section`
   display: grid;
   place-items: center;
-  min-height: 100vh;
-  padding: 1.6rem;
+  height: 100%;
 `;
 
 export const ShoppingList = styled.ul`
@@ -28,6 +27,5 @@ export const ContainerLink = styled.div`
     border-radius: 1rem;
     border: 1px solid ${theme.colors.base.c4};
     padding: 1.2rem;
-    position: relative;
   `}
 `;
