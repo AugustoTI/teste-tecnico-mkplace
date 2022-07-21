@@ -7,24 +7,16 @@ import { ThemeContext } from 'styled-components';
 import { Title } from '../Title';
 
 export const LinkCreateList = () => {
-  const theme = useContext(ThemeContext);
+  const { colors } = useContext(ThemeContext);
 
   return (
     <Link href="/create-list">
       <a>
         <S.Container>
-          <BoxIcon
-            background={theme.colors.contrast.c4a}
-            colorIcon={theme.colors.contrast.c2}
-          >
+          <BoxIcon background={colors.contrast.c4a} colorIcon={colors.contrast.c2}>
             <AddListIcon />
           </BoxIcon>
-          <Title
-            as="h2"
-            size="small"
-            weight={700}
-            textColor={theme.colors.contrast.c2}
-          >
+          <Title as="h2" size="small" weight={700} textColor={colors.contrast.c2}>
             Criar uma lista de compras
           </Title>
         </S.Container>

@@ -13,22 +13,24 @@ export const HomeMenu = () => {
 
   return (
     <S.Container>
-      <S.Content>
+      <div>
         <Image src="/logo-mkplace.png" width={278} height={50} alt="MKPLACE" />
-        <S.WrapperLinks>
-          <Link href={`/list`}>
-            <a>
-              <S.ContainerLink>
-                <BoxIcon background={theme.colors.base.c5a} colorIcon="#4F4F4F">
-                  <ListIcon />
-                </BoxIcon>
-                <InfoList />
-              </S.ContainerLink>
-            </a>
-          </Link>
-          <LinkCreateList />
-        </S.WrapperLinks>
-      </S.Content>
+        <S.ShoppingList>
+          <li>
+            <Link href={`/list`}>
+              <a>
+                <S.ContainerLink>
+                  <BoxIcon background={theme.colors.base.c5a} colorIcon="#4F4F4F">
+                    <ListIcon />
+                  </BoxIcon>
+                  <InfoList />
+                </S.ContainerLink>
+              </a>
+            </Link>
+          </li>
+        </S.ShoppingList>
+        <LinkCreateList />
+      </div>
     </S.Container>
   );
 };

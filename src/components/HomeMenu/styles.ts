@@ -7,15 +7,17 @@ export const Container = styled.main`
   padding: 1.6rem;
 `;
 
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-`;
+export const ShoppingList = styled.ul`
+  ${() => css`
+    margin-top: 4rem;
+    margin-bottom: 1.6rem;
+    max-height: 20rem;
+    overflow-y: auto;
 
-export const WrapperLinks = styled.div`
-  display: grid;
-  gap: 1.6rem;
+    li + li {
+      margin-top: 1.2rem;
+    }
+  `}
 `;
 
 export const ContainerLink = styled.div`
