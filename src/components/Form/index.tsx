@@ -1,3 +1,4 @@
+import { InputText } from '../InputText';
 import * as S from './styles';
 
 export const Form = () => {
@@ -22,10 +23,12 @@ export const Form = () => {
             <option value="Mundo Saudável">Mundo Saudável</option>
           </select>
         </S.ContainerSelect>
-        <S.ContainerInput>
-          <label htmlFor="categoria">Nome do produto</label>
-          <input id="categoria" placeholder="e.g Milho verde em conserva" type="" />
-        </S.ContainerInput>
+        <InputText
+          label="Nome do produto"
+          placeholder="e.g Milho verde em conserva"
+          nameOfInput="produto"
+          idLabel="produto"
+        />
       </form>
     </S.Container>
   );
