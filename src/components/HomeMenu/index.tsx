@@ -1,16 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import * as S from './styles';
-import { useContext } from 'react';
-import { ThemeContext } from 'styled-components';
-import { BoxIcon } from '../BoxIcon';
 import { LinkCreateList } from '../LinkCreateList';
 import { InfoList } from '../InfoList';
-import ListIcon from '../../assets/paper.svg';
+import { Box } from '../Box';
 
 export const HomeMenu = () => {
-  const theme = useContext(ThemeContext);
-
   return (
     <S.Container>
       <div>
@@ -19,12 +14,9 @@ export const HomeMenu = () => {
           <li>
             <Link href={`/list`}>
               <a>
-                <S.ContainerLink>
-                  <BoxIcon background={theme.colors.base.c5a} colorIcon="#4F4F4F">
-                    <ListIcon />
-                  </BoxIcon>
+                <Box>
                   <InfoList />
-                </S.ContainerLink>
+                </Box>
               </a>
             </Link>
           </li>

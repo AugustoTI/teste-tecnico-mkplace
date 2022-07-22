@@ -3,16 +3,11 @@ import * as S from './styles';
 import logo from '../../assets/logo.jpg';
 import { Title } from '../Title';
 import LeftArrow from '../../assets/left-arrow.svg';
-import ListIcon from '../../assets/paper.svg';
 import Link from 'next/link';
-import { BoxIcon } from '../BoxIcon';
-import { useContext } from 'react';
-import { ThemeContext } from 'styled-components';
 import { InfoList } from '../InfoList';
+import { Box } from '../Box';
 
 export const CreateListMenu = () => {
-  const { colors } = useContext(ThemeContext);
-
   return (
     <S.Container>
       <S.Header>
@@ -29,14 +24,9 @@ export const CreateListMenu = () => {
         </Link>
       </S.Header>
       <S.GridContainer>
-        <S.ListContainer>
-          <S.ListContent>
-            <BoxIcon background={colors.base.c5a} colorIcon="#4F4F4F">
-              <ListIcon />
-            </BoxIcon>
-            <InfoList />
-          </S.ListContent>
-        </S.ListContainer>
+        <Box>
+          <InfoList />
+        </Box>
         <S.FormContainer>
           <form>
             <S.ContainerSelect>
