@@ -1,11 +1,8 @@
 import { NextPage } from 'next';
+import { CreateListMenu } from '../components/CreateListMenu';
 
 const CreateList: NextPage = () => {
-  return (
-    <>
-      <h1>Página de criação</h1>
-    </>
-  );
+  return <CreateListMenu />;
 };
 
 export default CreateList;
