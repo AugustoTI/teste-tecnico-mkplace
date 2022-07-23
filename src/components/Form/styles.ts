@@ -12,5 +12,11 @@ export const Container = styled.div`
       display: grid;
       gap: 1.6rem;
     }
+
+    @media (max-width: 800px) {
+      max-width: initial;
+      border: none;
+      padding: 0;
+    }
   `}
 `;

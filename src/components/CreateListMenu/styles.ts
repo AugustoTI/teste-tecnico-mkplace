@@ -7,21 +7,6 @@ export const Container = styled.section`
   `}
 `;
 
-export const Header = styled.header`
-  ${() => css`
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-  `}
-`;
-
-export const HeaderContent = styled.div`
-  ${() => css`
-    display: flex;
-    align-items: center;
-  `}
-`;
-
 export const GridContainer = styled.div`
   ${() => css`
     margin-top: 5rem;
@@ -29,5 +14,10 @@ export const GridContainer = styled.div`
     grid-template-columns: 32rem 1fr;
     align-items: start;
     gap: 2.4rem;
+
+    @media (max-width: 800px) {
+      margin-top: 2.4rem;
+      grid-template-columns: 1fr;
+    }
   `}
 `;
